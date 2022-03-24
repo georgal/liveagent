@@ -43,11 +43,21 @@
 		
 		let piva = "PIVA1234";
 		let cod_integra = "INTEGRA1001";
+		let mode = "Pubblica";
 		
-		embedded_svc.settings.extraPrechatFormDetails = [{"label":"Indirizzo Email","transcriptFields":["Indirizzo_email__c"],"displayToAgent":true},
+		if (mode == "Privata"){
+			embedded_svc.settings.extraPrechatFormDetails = [{"label":"Nome","transcriptFields":["Nome__c"],"displayToAgent":true}
+								 {"label":"Indirizzo Email","transcriptFields":["Indirizzo_email__c"],"displayToAgent":true},
 								 {"label":"Codice Fiscale","transcriptFields":["Codice_Fiscale__c"],"displayToAgent":true},
 								 {"label":"Partita IVA","value":piva,"transcriptFields":["Partita_IVA__c"],"displayToAgent":true},
-								 {"label":"Codice Integra","value":cod_integra,"transcriptFields":["Codice_Integra__c"],"displayToAgent":true}];
+								 {"label":"Codice Integra","value":cod_integra,"transcriptFields":["Codice_Integra__c"],"displayToAgent":true},
+								 {"label":"Commenti","value":mode,"transcriptFields":["Mode__c"],"displayToAgent":true}];
+		} else {
+			embedded_svc.settings.extraPrechatFormDetails = [{"label":"Nome","transcriptFields":["Nome__c"],"displayToAgent":true},
+								 {"label":"Cognome","transcriptFields":["Cognome__c"],"displayToAgent":true},
+								 {"label":"Codice Fiscale","transcriptFields":["Codice_Fiscale__c"],"displayToAgent":true},
+								 {"label":"Commenti","value":mode,"transcriptFields":["Mode__c"],"displayToAgent":true}];
+		}
 		
 		embedded_svc.settings.prepopulatedPrechatFields = {
 			FirstName: "John",
