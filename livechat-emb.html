@@ -64,7 +64,7 @@
 			  "displayToAgent": true
 			}, {
 			  "label": "Codice fiscale",
-			  "transcriptFields":["CF"],
+			  "transcriptFields":["Codice_Fiscale__c"],
 			  "displayToAgent": true
 			}, {
 			  "label": "Mode",
@@ -75,10 +75,6 @@
 
 		embedded_svc.settings.extraPrechatInfo = [{
 			  "entityName": "Contact",
-			  "showOnCreate": true,
-			  "linkToEntityName": "Case",
-			  "linkToEntityField": "ContactId",
-			  "saveToTranscript": "ContactId",
 			  "entityFieldMaps": [{
 			    "isExactMatch": true,
 			    "fieldName": "FirstName",
@@ -94,10 +90,8 @@
 			  }]
 			}, {
 			  "entityName": "Case",
-			  "showOnCreate": false,
-			  "saveToTranscript": "CaseId",
 			  "entityFieldMaps": [{
-			    "isExactMatch": false,
+			    "isExactMatch": true,
 			    "fieldName": "Subject",
 			    "doCreate": false,
 			    "doFind": false,
@@ -109,13 +103,13 @@
 			    "doFind": false,
 			    "label": "Email"
 			  }, {
-			    "isExactMatch": false,
+			    "isExactMatch": true,
 			    "fieldName": "Codice_Fiscale_Intestatario__c",
 			    "doCreate": false,
 			    "doFind": true,
 			    "label": "Codice fiscale"
 			  }, {
-			    "isExactMatch": false,
+			    "isExactMatch": true,
 			    "fieldName": "Commenti__c",
 			    "doCreate": false,
 			    "doFind": false,
