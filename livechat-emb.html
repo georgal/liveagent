@@ -57,7 +57,7 @@
 								 {"label":"Codice User Web","value":cod_user_web,"transcriptFields":["Codice_User_Web__c"],"displayToAgent":true},
 								 {"label":"Mode","value":mode,"transcriptFields":["Mode__c"],"displayToAgent":true}];
 		
-		embedded_svc.settings.extraPrechatInfo = [{"entityFieldMaps":[{"doCreate":false,"doFind":true,"fieldName":"LastName","isExactMatch":true,"label":"Last Name"},{"doCreate":false,"doFind":true,"fieldName":"FirstName","isExactMatch":true,"label":"First Name"}, {"doCreate":false,"doFind":true,"fieldName":"Email","isExactMatch":true,"label":"Email"}],"entityName":"Contact","saveToTranscript":"Contact","showOnCreate":true}];
+		embedded_svc.settings.extraPrechatInfo = [{"entityFieldMaps":[{"doCreate":false,"doFind":false,"fieldName":"Email","isExactMatch":true,"label":"Email"}}],"entityName":"Contact","saveToTranscript":"Contact","showOnCreate":false}, {"entityFieldMaps":[{"doCreate":false,"doFind":false,"fieldName":"Email","isExactMatch":true,"label":"Email"}}],"entityName":"Contact","saveToTranscript":"Case","showOnCreate":false}];
 
 		
 		embedded_svc.settings.prepopulatedPrechatFields = {
