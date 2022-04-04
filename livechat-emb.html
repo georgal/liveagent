@@ -51,6 +51,9 @@
 								 {"label":"Codice Integra","value":cod_integra,"transcriptFields":["Codice_Integra__c"],"displayToAgent":true},
 								 {"label":"Mode","value":mode,"transcriptFields":["Mode__c"],"displayToAgent":true}];
 		
+		embedded_svc.settings.extraPrechatInfo = [{"entityFieldMaps":[{"doCreate":false,"doFind":true,"fieldName":"LastName","isExactMatch":true,"label":"Last Name"},{"doCreate":false,"doFind":true,"fieldName":"FirstName","isExactMatch":true,"label":"First Name"}, {"doCreate":false,"doFind":true,"fieldName":"Email","isExactMatch":true,"label":"Email"}],"entityName":"Contact","saveToTranscript":"Contact","showOnCreate":true}];
+
+		
 		embedded_svc.settings.prepopulatedPrechatFields = {
 			FirstName: "John",
 			LastName: "Doe",
