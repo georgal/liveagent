@@ -57,29 +57,7 @@
 								 {"label":"Codice User Web","value":cod_user_web,"transcriptFields":["Codice_User_Web__c"],"displayToAgent":true},
 								 {"label":"Mode","value":mode,"transcriptFields":["Mode__c"],"displayToAgent":true}];
 		
-		embedded_svc.settings.extraPrechatInfo = [{
-		  "entityName": "Contact",
-		  "showOnCreate": false,
-		  "entityFieldMaps": [{
-		    "isExactMatch": true,
-		    "fieldName": "FirstName",
-		    "doCreate": false,
-		    "doFind": false,
-		    "label": "First Name"
-		  }]
-		}, {
-		  "entityName": "Case",
-		  "showOnCreate": false,
-		  "entityFieldMaps": [{
-		    "isExactMatch": false,
-		    "fieldName": "Subject",
-		    "doCreate": false,
-		    "doFind": false,
-		    "label": "issue"
-		  }]
-		}]
 
-		
 		embedded_svc.settings.prepopulatedPrechatFields = {
 			FirstName: "John",
 			LastName: "Doe",
