@@ -101,7 +101,6 @@
 		);
 	};
 	
-	function initialize(){
 		if (!window.embedded_svc) {
 			var s = document.createElement('script');
 			s.setAttribute('src', 'https://gruppocap--chatbot.my.salesforce.com/embeddedservice/5.0/esw.min.js');
@@ -112,7 +111,7 @@
 		} else {
 			initESW('https://service.force.com');
 		}
-	}
+	
 </script>
 	<button id="chat-init" onclick="initialize()"> THE CHAT </button>
 </body> 
