@@ -101,19 +101,19 @@
 		);
 	};
 	
-	
-
-	if (!window.embedded_svc) {
-		var s = document.createElement('script');
-		s.setAttribute('src', 'https://gruppocap--chatbot.my.salesforce.com/embeddedservice/5.0/esw.min.js');
-		s.onload = function() {
-			initESW(null);
-		};
-		document.body.appendChild(s);
-	} else {
-		initESW('https://service.force.com');
+	function initialize(){
+		if (!window.embedded_svc) {
+			var s = document.createElement('script');
+			s.setAttribute('src', 'https://gruppocap--chatbot.my.salesforce.com/embeddedservice/5.0/esw.min.js');
+			s.onload = function() {
+				initESW(null);
+			};
+			document.body.appendChild(s);
+		} else {
+			initESW('https://service.force.com');
+		}
 	}
 </script>
-	<button id="chat-init"> THE CHAT </button>
+	<button id="chat-init" onclick="initialize"> THE CHAT </button>
 </body> 
 </html>
