@@ -50,6 +50,7 @@
             let cod_user_web = "USERWEB12345";
             let cod_cliente = "12345";
             let mode = "Privata";
+	    let contratti ="0006121286,0006121290,0006121298";
 
             embedded_svc.settings.extraPrechatInfo = [{
                 "entityFieldMaps":
@@ -79,7 +80,8 @@
             embedded_svc.settings.prepopulatedPrechatFields = {
                 FirstName: "John",
                 LastName: "Doe",
-                Commenti__c: mode
+                Commenti__c: mode,
+		Numero_4_Bolletta__c: contratti
             }; //Sets the auto-population of pre-chat form fields
             //embedded_svc.settings.fallbackRouting = []; //An array of button IDs, user IDs, or userId_buttonId
             embedded_svc.settings.offlineSupportMinimizedText = 'CHAT'; //(Defaults to Contact Us)
