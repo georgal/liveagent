@@ -46,9 +46,7 @@
 	    let cfiscale = "CCCFFF22H22975X";
             let piva = "PIVA1234";
             let cod_integra = "INTEGRA1001";
-            let cod_id_contratto = "CODID12345";
             let cod_user_web = "USERWEB12345";
-            let cod_cliente = "12345";
             let mode = "Privata";
 	    let contratti ="0006121286,0006121290,0006121298";
 
@@ -63,7 +61,7 @@
                     [{ "doCreate": false, "doFind": true, "fieldName": "Indirizzo_Email__c", "isExactMatch": true, "label": "Indirizzo Email" },
                     { "doCreate": false, "doFind": true, "fieldName": "Numero_Utenza__c", "isExactMatch": true, "label": "Codice Cliente" },
                     { "doCreate": false, "doFind": true, "fieldName": "Telefono_Mobile_Intestatario__c", "isExactMatch": true, "label": "Telefono" },
-		    { "doCreate": false, "doFind": true, "fieldName": "Numero_4_Bolletta__c", "isExactMatch": true, "label": "Altre Bollette" },
+		    { "doCreate": false, "doFind": true, "fieldName": "Numero_4_Bolletta__c", "isExactMatch": true, "label": "Codice Contratto" },
                     { "doCreate": false, "doFind": true, "fieldName": "Commenti__c", "isExactMatch": true, "label": "Commenti" }],
                 "entityName": "Case", "saveToTranscript": "Case", "showOnCreate": true
             }];
@@ -71,9 +69,9 @@
             embedded_svc.settings.extraPrechatFormDetails = [{ "label": "Indirizzo Email", "transcriptFields": ["Indirizzo_email__c"], "displayToAgent": true },
             { "label": "Codice Fiscale", "value": cfiscale, "transcriptFields": ["Codice_Fiscale__c"], "displayToAgent": true },
             { "label": "Partita IVA", "value": piva, "transcriptFields": ["Partita_IVA__c"], "displayToAgent": true },
-            { "label": "Codice Cliente", "value": cod_cliente, "transcriptFields": ["Codice_Cliente__c"], "displayToAgent": true },
+            { "label": "Codice Cliente", "transcriptFields": ["Codice_Cliente__c"], "displayToAgent": true },
             { "label": "Codice Integra", "value": cod_integra, "transcriptFields": ["Codice_Integra__c"], "displayToAgent": true },
-            { "label": "Altre Bollette", "transcriptFields": ["Codice_Id_Contratto__c"], "displayToAgent": true },
+            { "label": "Codice Contratto", "transcriptFields": ["Codice_Id_Contratto__c"], "displayToAgent": true },
             { "label": "Codice User Web", "value": cod_user_web, "transcriptFields": ["Codice_User_Web__c"], "displayToAgent": true },
             { "label": "Mode", "value": mode, "transcriptFields": ["Mode__c"], "displayToAgent": true }];
 
