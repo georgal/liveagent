@@ -40,7 +40,7 @@
             let piva = "PIVA1234";
             let cod_integra = "2013C5495988";
             let cod_user_web = "UW-105954";
-            let mode = "Pubblica";
+            let mode = "Privata";
 	    let contratti ="0006121286,0006121290,0006121298";
 
             embedded_svc.settings.extraPrechatInfo = [{
@@ -62,8 +62,8 @@
             embedded_svc.settings.extraPrechatFormDetails = [{ "label": "Indirizzo Email", "transcriptFields": ["Indirizzo_email__c"], "displayToAgent": true },
             { "label": "Codice Fiscale", "value": cfiscale, "transcriptFields": ["Codice_Fiscale__c"], "displayToAgent": true },
             { "label": "Partita IVA", "value": piva, "transcriptFields": ["Partita_IVA__c"], "displayToAgent": true },
+	    { "label": "Codice Integra", "value": cod_integra, "transcriptFields": ["Codice_Integra__c"], "displayToAgent": true },
             { "label": "Numero Utenza", "transcriptFields": ["Codice_Cliente__c"], "displayToAgent": true },
-            { "label": "Codice Integra", "value": cod_integra, "transcriptFields": ["Codice_Integra__c"], "displayToAgent": true },
             { "label": "Altre Bollette", "transcriptFields": ["Codice_Id_Contratto__c"], "displayToAgent": true },
             { "label": "Codice User Web", "value": cod_user_web, "transcriptFields": ["Codice_User_Web__c"], "displayToAgent": true },
             { "label": "Mode", "value": mode, "transcriptFields": ["Mode__c"], "displayToAgent": true }];
