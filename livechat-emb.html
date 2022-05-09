@@ -58,8 +58,8 @@
 
             embedded_svc.settings.extraPrechatInfo = [{
                 "entityFieldMaps":
-                    [{ "doCreate": false, "doFind": true, "fieldName": "LastName", "isExactMatch": true, "label": "Last Name" },
-                    { "doCreate": false, "doFind": true, "fieldName": "FirstName", "isExactMatch": true, "label": "First Name" }],
+                    [{ "doCreate": false, "doFind": false, "fieldName": "LastName", "isExactMatch": true, "label": "Last Name" },
+                    { "doCreate": false, "doFind": false, "fieldName": "FirstName", "isExactMatch": true, "label": "First Name" }],
                 "entityName": "Contact", "saveToTranscript": "Contact", "showOnCreate": true
             },
             {
@@ -68,6 +68,7 @@
                     { "doCreate": false, "doFind": true, "fieldName": "Numero_Utenza__c", "isExactMatch": true, "label": "Numero Utenza" },
                     { "doCreate": false, "doFind": true, "fieldName": "Telefono_Mobile_Intestatario__c", "isExactMatch": true, "label": "Telefono" },
 		    { "doCreate": false, "doFind": true, "fieldName": "Numero_4_Bolletta__c", "isExactMatch": true, "label": "Altre Bollette" },
+		    { "doCreate": false, "doFind": true, "fieldName": "Codice_Anagrafico_COM__c", "isExactMatch": true, "label": "Codice Anagrafico (COM)" },
                     { "doCreate": false, "doFind": true, "fieldName": "Commenti__c", "isExactMatch": true, "label": "Commenti" }],
                 "entityName": "Case", "saveToTranscript": "Case", "showOnCreate": true
             }];
@@ -75,9 +76,9 @@
             embedded_svc.settings.extraPrechatFormDetails = [{ "label": "Indirizzo Email", "transcriptFields": ["Indirizzo_email__c"], "displayToAgent": true },
             { "label": "Codice Fiscale", "value": cfiscale, "transcriptFields": ["Codice_Fiscale__c"], "displayToAgent": true },
             { "label": "Partita IVA", "value": piva, "transcriptFields": ["Partita_IVA__c"], "displayToAgent": true },
-	    { "label": "Codice Integra", "value": cod_integra, "transcriptFields": ["Codice_Integra__c"], "displayToAgent": true },
             { "label": "Numero Utenza", "transcriptFields": ["Codice_Cliente__c"], "displayToAgent": true },
             { "label": "Altre Bollette", "transcriptFields": ["Codice_Id_Contratto__c"], "displayToAgent": true },
+	    { "label": "Codice Anagrafico (COM)", "transcriptFields": ["Codice_Integra__c"], "displayToAgent": true },
             { "label": "Codice User Web", "value": cod_user_web, "transcriptFields": ["Codice_User_Web__c"], "displayToAgent": true },
             { "label": "Mode", "value": mode, "transcriptFields": ["Mode__c"], "displayToAgent": true }];
 
@@ -87,6 +88,7 @@
                 LastName: "Doe",
                 Commenti__c: mode,
 		Numero_4_Bolletta__c: contratti,
+		Codice_Anagrafico_COM__c: cod_integra,
 		Language: language
             }; //Sets the auto-population of pre-chat form fields
             //embedded_svc.settings.fallbackRouting = []; //An array of button IDs, user IDs, or userId_buttonId
