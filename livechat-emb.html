@@ -6,7 +6,14 @@
 
     <h1>Test Emb</h1>
 	
-	<button type="button" id="trigger" onclick="liveagent.startChat('5730D0000008Oec')"> CHAT </button>
+	<button type="button" id="trigger" onclick="embedded_svc.liveAgentAPI.startChat({
+                directToAgentRouting: {
+                buttonId: "5735f000000Tpl7",
+                fallback: true
+            },
+            extraPrechatInfo: [],
+            extraPrechatFormDetails: []
+            })"> CHAT </button>
 	
 	<script type='text/javascript'>
 		
