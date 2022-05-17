@@ -6,16 +6,13 @@
 
     <h1>Test Emb</h1>
 	
-	<button type="button" id="trigger" onclick="initialize_chat()"> CHAT </button>
+	<button type="button" id="trigger" onclick="bootstrapChat()"> CHAT </button>
 	
 	<script type='text/javascript'>
 		
-		function initialize_chat(){
-			embedded_svc.liveAgentAPI.startChat({
-			directToAgentRouting: {
-			buttonId: "5730D0000008Oec",
-			fallback: false}})
-		}
+		function bootstrapChat() {
+		embedded_svc.bootstrapEmbeddedService();
+	}
 		
 // 		$( "#trigger" ).on( "click", function() {
 // 		  $( ".helpButtonEnabled.uiButton" ).click();
