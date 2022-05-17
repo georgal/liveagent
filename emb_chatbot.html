@@ -10,7 +10,7 @@
 	
 	<script type='text/javascript'>
 		
-		function initialize_chat(gslbBaseURL){
+		function initialize_chat(){
 			embedded_svc.settings.displayHelpButton = true; //Or false
             embedded_svc.settings.language = 'it'; //For example, enter 'en' or 'en-US'
 
@@ -79,7 +79,7 @@
             embedded_svc.init(
                 'https://gruppocap--chatpaolo.my.salesforce.com',
 			'https://chatpaolo-safoliveagent.cs162.force.com/chatbot',
-			gslbBaseURL,
+			null,
 			'00D5t0000004cD0',
 			'Chatbot_Embedded',
 			{
@@ -92,18 +92,6 @@
 			}
             );
         };
-
-	if (!window.embedded_svc) {
-		var s = document.createElement('script');
-		s.setAttribute('src', 'https://gruppocap--chatpaolo.my.salesforce.com/embeddedservice/5.0/esw.min.js');
-		s.onload = function() {
-			initESW(null);
-		};
-		document.body.appendChild(s);
-	} else {
-		initESW('https://service.force.com');
-	};
-		}
 		
 // 		$( "#trigger" ).on( "click", function() {
 // 		  $( ".helpButtonEnabled.uiButton" ).click();
