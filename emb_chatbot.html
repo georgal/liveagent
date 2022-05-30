@@ -109,8 +109,8 @@
     		console.log("onChatEndedByAgent event was fired.  liveAgentSessionKey was " + data.liveAgentSessionKey);
 		});
 		
-	    embedded_svc.addEventHandler("onClickSubmitButton", function(data) {
-    		console.log("onClickSubmitButton event was fired.  liveAgentSessionKey was " + data.liveAgentSessionKey);
+	    embedded_svc.addEventHandler("afterMinimize", function(data) {
+    		console.log("afterMinimize event was fired.");
 		});
 
             embedded_svc.init(
