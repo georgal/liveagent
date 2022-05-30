@@ -7,20 +7,21 @@
     <h1>Test Emb</h1>
 	
 	<button type="button" id="trigger" onclick="initialize_chat()"> CHAT </button>
+	<button type="button" id="trigger" onclick="initialize_chat2()"> CHAT MIN </button>
 	
 	<script type='text/javascript'>
 		
 		//function initialize_chat(){
 		//	embedded_svc.bootstrapEmbeddedService();
 		//}
-		//function initialize_chat(){
-		//	document.getElementById("helpButtonSpan").click();
-		//}
+		function initialize_chat2(){
+			var minimizedBtn = document.getElementsByClassName("minimizedContainer")[0];
+			minimizedBtn.click();
+		}
 		function initialize_chat(){
 			document.getElementById("helpButtonSpan").click();
 			
-			var minimizedBtn = document.getElementsByClassName("minimizedContainer")[0];
-			minimizedBtn.click();
+			
 		}
 	
 	</script>
