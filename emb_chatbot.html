@@ -6,8 +6,10 @@
 
     <h1>Test Emb</h1>
 	
-	<button type="button" id="trigger" onclick="initialize_chat()"> CHAT </button>
-	<button type="button" id="trigger" onclick="initialize_chat2()"> CHAT MIN </button>
+	<button type="button" id="trigger" onclick="initialize_chat()"> OPEN CHAT </button>
+	<button type="button" id="trigger" onclick="initialize_chat2()"> MINIMIZE CHAT </button>
+	<button type="button" id="trigger" onclick="clear_chat()"> CLEAR CHAT </button>
+	<button type="button" id="trigger" onclick="end_chat()"> TERMINATE CHAT </button>
 	
 	<script type='text/javascript'>
 		
@@ -18,9 +20,13 @@
 			document.querySelectorAll(".sidebarMinimized")[0].getElementsByClassName("minimizedContainer")[0].click()
 		}
 		function initialize_chat(){
-			document.getElementById("helpButtonSpan").click();
-			
-			
+			document.getElementById("helpButtonSpan").click();			
+		}
+		function clear_chat(){
+			embedded_svc.liveAgentAPI.clearSession();			
+		}
+		function end_chat(){
+			embedded_svc.liveAgentAPI.endChat();
 		}
 	
 	</script>
