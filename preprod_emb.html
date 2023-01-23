@@ -102,7 +102,7 @@
                 console.log("onChatEndedByChasitor event was fired.  liveAgentSessionKey was " + data.liveAgentSessionKey);
             });
 
-            embedded_svc.addEventHandler("onChatEndedByAgent", function (data) {
+            embedded_svc.addEventHandler("afterDestroy", function (data) {
                 console.log("onChatEndedByAgent event was fired.  liveAgentSessionKey was " + data.liveAgentSessionKey);
             });
 
