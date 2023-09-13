@@ -62,7 +62,7 @@
                         { "doCreate": false, "doFind": false, "fieldName": "Numero_Utenza__c", "isExactMatch": true, "label": "Numero Utenza" },
                         { "doCreate": false, "doFind": false, "fieldName": "Telefono_Mobile_Intestatario__c", "isExactMatch": true, "label": "Telefono" },
                         { "doCreate": false, "doFind": false, "fieldName": "Numero_4_Bolletta__c", "isExactMatch": true, "label": "Altre Bollette" },
-                        { "doCreate": false, "doFind": false, "fieldName": "Codice_Istat__c", "isExactMatch": true, "label": "Codice Istat" },
+                        { "doCreate": false, "doFind": false, "fieldName": "Codice_Anagrafico_COM__c", "isExactMatch": true, "label": "Codice Anagrafico (COM)" },
                         { "doCreate": false, "doFind": false, "fieldName": "Commenti__c", "isExactMatch": true, "label": "Commenti" }],
                     "entityName": "Case", "saveToTranscript": "Case", "showOnCreate": false
                 }];
@@ -72,7 +72,7 @@
             { "label": "Partita IVA", "value": piva, "transcriptFields": ["Partita_IVA__c"], "displayToAgent": true },
             { "label": "Numero Utenza", "value": cod_cliente, "transcriptFields": ["Codice_Cliente__c"], "displayToAgent": true },
             { "label": "Altre Bollette", "transcriptFields": ["Codice_Id_Contratto__c"], "displayToAgent": true },
-            { "label": "Codice Istat", "transcriptFields": ["Codice_Integra__c"], "displayToAgent": true },
+            { "label": "Codice Anagrafico (COM)", "transcriptFields": ["Codice_Integra__c"], "displayToAgent": true },
             { "label": "Codice User Web", "value": cod_user_web, "transcriptFields": ["Codice_User_Web__c"], "displayToAgent": true },
             { "label": "Mode", "value": mode, "transcriptFields": ["Mode__c"], "displayToAgent": true }];
 
@@ -83,7 +83,7 @@
                 Commenti__c: mode,
                 Numero_Utenza__c: cod_cliente,
                 Numero_4_Bolletta__c: contratti,
-                Codice_Istat__c: cod_integra,
+                Codice_Anagrafico_COM__c: cod_integra,
                 Language: language
             }; //Sets the auto-population of pre-chat form fields
 
