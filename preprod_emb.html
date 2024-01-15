@@ -110,10 +110,10 @@
             });
 
            embedded_svc.init(
-			'https://gruppocap--preprod.sandbox.my.salesforce.com',
-			'https://gruppocap--preprod.sandbox.my.salesforce-sites.com/chatbot',
+			'https://gruppocap--billprepro.sandbox.my.salesforce.com',
+			'https://gruppocap--billprepro.sandbox.my.salesforce-sites.com/chatbot',
 			gslbBaseURL,
-			'00D3M0000000fLX',
+			'00DMA000000DnED',
 			'Chatbot_Embedded',
 			{
 				baseLiveAgentContentURL: 'https://c.la2s-core1.sfdc-3d0u2f.salesforceliveagent.com/content',
@@ -128,7 +128,7 @@
 
         if (!window.embedded_svc) {
             var s = document.createElement('script'); 
-            s.setAttribute('src', 'https://gruppocap--preprod.sandbox.my.salesforce.com/embeddedservice/5.0/esw.min.js');
+            s.setAttribute('src', 'https://gruppocap--billprepro.sandbox.my.salesforce.com/embeddedservice/5.0/esw.min.js');
             s.onload = function () {
                 initESW(null);
             };
